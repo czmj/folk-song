@@ -43,6 +43,7 @@ var drama2 = [
 var drama3 = [
     "Diddle diddle dum all the day"
 ]
+//add in corresponding order to drama2
 var drama4 = [
     "With a dark and roving eye",
     "But I must remain brave",
@@ -68,6 +69,8 @@ var res4 = [
 
 
 // ---------- MORE INTERESTING THINGS HAPPEN HERE -------- //
+
+
 // Returns a random integer between zero (included) and max (excluded)
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -77,17 +80,24 @@ function getRandomInt(max) {
 function getSong(){
     var couplet = getRandomInt(intro2.length);
     var verse1 = intro1[getRandomInt(intro1.length)] + "</br>" + intro2[couplet] + "</br>" +  intro3[getRandomInt(intro3.length)] + "</br>" +  intro4[couplet];
+    var tweet1 =  '"'+ verse1.split('<')[0]+'..." \n Check out this folk song generator:' ; 
     
     couplet = getRandomInt(drama2.length);
     var verse2 = drama1[getRandomInt(drama1.length)] + "</br>" + drama2[couplet] + "</br>" +  drama3[getRandomInt(drama3.length)] + "</br>" +  drama4[couplet];
-    
 
     document.getElementById("intro").innerHTML=verse1;
+    document.getElementById("tweet1").setAttribute('data-text', tweet1);
     document.getElementById("drama").innerHTML=verse2;
     
+    //TODO: choose a tune in the right meter
     document.getElementById("vid").innerHTML="<p>To be sung to te tune of 'A Rose in April'</p>"
-    document.getElementById("right-col").style.display = 'block';
-    document.getElementById("btn2").style.display = 'block';
+    
+    
+//Twitter stuff
+window.twttr=(function(d,s,id){var t,js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return}js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);return window.twttr||(t={_e:[],ready:function(f){t._e.push(f)}})}(document,"script","twitter-wjs"));
+
+    
+    document.getElementById("song").style.display = 'block';
 
     
     window.location.assign("#song");

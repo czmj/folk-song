@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
 <head>
@@ -30,23 +30,10 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
                 <a class="navbar-brand" href="#">Folk Song Generator</a>
+
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="https://twitter.com/czmj2">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            <!-- /.navbar header -->
         </div>
         <!-- /.container -->
     </nav>
@@ -75,17 +62,20 @@
     
     <!-- Page Content -->
 
-    <div class="content-section-a" id="song">
+    <div class="content-section-a" id="song" style="display:none">
 
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
-                    <p class="lead" id="intro"></p>
-                    <p class="lead" id="drama"></p>
-                    <button id="btn2" onclick="getSong()" type="button" class="btn btn-primary btn-lg" style="display:none">Make another fucking epic song!</button>
+                    <div class="lead col-lg-10" id="intro"></div>
+                    <div class="col-lg-2" >
+                        <a id="tweet1" href="https://twitter.com/share" class="twitter-share-button" data-url="http://czmj.github.io/folk-song/" data-via="czmj2" data-count="none" data-text="">Tweet</a>
+                    </div>
+                    <div class="lead col-lg-10" id="drama"></div>
+                    <button onclick="getSong()" type="button" class="btn btn-primary btn-lg">Make another fucking epic song!</button>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6" id="right-col" style="display:none">
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                     <div id="vid"></div>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
@@ -112,7 +102,7 @@
                             <a href="https://twitter.com/czmj2">Contact</a>
                         </li>
                     </ul>
-                    <p class="copyright text-muted small">Theme by <a href="http://startbootstrap.com/template-overviews/landing-page/">StartBootstrap</a></p>
+                    <p class="copyright text-muted small">Theme by <a href="http://startbootstrap.com/template-overviews/landing-page/">StartBootstrap</a>  &#9670;  Image by <a href="http://commons.wikimedia.org/wiki/File:KRusby_Larmer08.jpg">gregoryspawton</a></p>
                 </div>
             </div>
         </div>
